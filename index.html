@@ -2,8 +2,8 @@
 <html lang="bg">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Галерия – Бърза помощ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Линейки Варна</title>
   <style>
     * {
       margin: 0;
@@ -13,14 +13,10 @@
 
     body {
       font-family: 'Arial', sans-serif;
-      background-color: #669bbc ;
-      color: white;
-      @media(max-width: 768px) {
-        background-color: #5fa1f7;
+      background-color: #5fa1f7;
+      color: #333;
     }
-  }
 
-    /* HEADER */
     .header {
       background-color: #780000;
       padding: 1.5rem;
@@ -34,10 +30,7 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  @media(max-width: 768px) {
-        background-color: #c90000;
-    }}
-
+    }
     @media(max-width: 768px) {
     .menu-icon {
       display: none;
@@ -68,6 +61,7 @@
       transform: rotate(-45deg) translate(6px, -6px);
     }
   }
+
     nav {
       background-color: #003049;
       display: flex;
@@ -103,70 +97,46 @@ nav a:hover {
   opacity: 1;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   @media(max-width: 768px) {
-        background-color: #c90000;
+        Background-color: #c90000;
     }
 }
-.about-us {
+
+
+.content-wrapper {
   max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  margin: 200px auto 60px auto;
-      @media(max-width: 768px)
-      {
-        margin: 100px auto 60px auto;
-      }
-}
-
-.about-us h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-.about-text {
-  text-align: center;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 2rem;
-}
-
-.about-text p {
-  max-width: 900px;
-  margin: 1rem auto;
-}
-
-.about-images {
+  margin: 160px auto 3rem auto;
+  /* margin-top: 160px; margin-bottom: 3rem; */
+  padding: 2rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.about-images img {
-  width: 100%;
-  max-width: 580px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
-}
-
-.about-images img:hover {
-  transform: scale(1.03);
-}
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+  gap: 2rem;
+  background: rgba(165, 189, 241, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  @media(max-width: 768px) {
+    background: rgba(144, 177, 247, 0.938);;
     }
 
-    /* FOOTER */
+}
+
+    #content1, #main, #content2 {
+      background-color: #fafafa;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      flex: 1;
+      min-width: 280px;
+      transition: 0.3s;
+      
+    }
+
+    #main {
+      background-color: #780000;
+      color: white;
+      @media(max-width: 768px) {
+        background-color: #c90000;
+    }}
+
     footer {
       background-color: #003049;
       color: white;
@@ -175,7 +145,7 @@ nav a:hover {
       @media(max-width: 768px) {
         background-color:  #045e8f;
     }
-  }
+    }
 
     .footer-container {
       display: flex;
@@ -224,21 +194,62 @@ nav a:hover {
       padding-top: 1rem;
       font-size: 0.9rem;
     }
-    @media(max-width: 768px) {
-      nav {
-      background-color: #003049;
-      display: none;
+
+    .button-container {
+      display: flex;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      padding: 1rem;
-      position: fixed;
-  top: 80px; 
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  
-} 
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    .call-button {
+      background-color: #47df28;
+      color: white;
+      padding: 0px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      text-transform: uppercase;
+      box-shadow: 0 0 15px rgba(3, 75, 3, 0.7);
+      animation: pulse 1.5s infinite;
+      transition: background-color 0.3s;
+    }
+
+    .call-button:hover {
+      background-color: #000000;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 15px #1be468b3;
+      }
+      50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 25px rgb(44, 218, 28);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(101, 223, 101, 0.808);
+      }
+    }
+
+    @media(max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed; /* фиксирано спрямо екрана, не родителя */
+    top: 80px; /* точно под .header, който е 80px */
+    left: 0;
+    right: 0;
+    background-color: #045e8f;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 999;
+  }
 
   nav.show {
     display: flex;
@@ -265,7 +276,7 @@ nav a:hover {
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: #248012;
+        background-color: #34d45a;
         color: white;
         text-align: center;
         padding: 15px;
@@ -279,14 +290,15 @@ nav a:hover {
       }
 
       .call-now-mobile svg {
-        flex-shrink: 0;S
+        flex-shrink: 0;
       }
     }
     @media (max-width: 768px) {
   .button-container {
     display: none;
   }
-    }
+}
+    
   </style>
 </head>
 <body>
@@ -301,41 +313,47 @@ nav a:hover {
   </div>
 
   <nav>
-    <a href="index.html">НАЧАЛО</a>
+    <a href="#">НАЧАЛО</a>
     <a href="uslugi.html">УСЛУГИ</a>
     <a href="ceni2.html">ЦЕНИ</a>
-    <a href="#">ЗА НАС</a>
+    <a href="galeriq3.html">ЗА НАС</a>
     <a href="kontakti2.html">КОНТАКТИ</a>
   </nav>
 
-  <div class="about-us">
-    <h2>За нас</h2>
-    <div class="about-text">
-      <p>
-        “Бърза помощ Варна” е водеща частна компания за спешна и неотложна медицинска помощ, с над 10 години опит в грижата за пациенти в критични и специфични ситуации. Предлагаме 24/7 медицински транспорт, мобилни екипи и пълноценна грижа на място.
-      </p>
-      <p>
-        Нашият екип от сертифицирани лекари, парамедици и реаниматори работи с най-модерно оборудване, отговарящо на европейските стандарти. Всяка наша линейка е подготвена за интензивен транспорт, с кардиомонитори, кислородна система и животоспасяващи средства.
-      </p>
+  <div class="content-wrapper">
+    <div id="content1">
+      <h3>❓ Често задавани въпроси:</h3><br>
+      <strong>Кога да се обадя на бърза помощ?</strong><br><br>
+      При силна болка, загуба на съзнание, затруднено дишане, сериозно кървене или травма.<br><br>
+      <strong>Какво трябва да подготвя при обаждане?</strong><br><br>
+      ➡️ Кратко описание на симптомите<br>
+      ➡️ Адрес и точна локация<br>
+      ➡️ Телефон за връзка
     </div>
-  
-    <div class="about-images">
-      <img src="https://via.placeholder.com/600x400?text=Линейка+на+място" alt="Линейка на адрес">
-      <img src="https://via.placeholder.com/600x400?text=Екип+в+действие" alt="Екип в действие">
+
+    <div id="main">
+      <h2>Нуждаеш се от спешна помощ?</h2><br>
+      Ние сме до теб 24/7 с професионален екип, оборудван да реагира незабавно във всяка ситуация.<br><br>
+      ✅ Спешен медицински транспорт<br>
+      ✅ Домашни посещения от медицински специалисти<br>
+      ✅ Онлайн консултации с лекар<br>
+      ✅ Поддръжка при хронични състояния<br>
+      ✅ Психологическа подкрепа при кризи<br><br>
+      📞 Не чакай – обади се сега!<br><br>
+      <div class="button-container">
+        <button class="call-button">ОБАДИ СЕ</button>
+      </div>
     </div>
-  
-    <div class="about-text">
-      <p>
-        Осигуряваме транспорт на пациенти между болници, до дома или до медицински прегледи, включително и международен транспорт с пълна медицинска осигуреност. Всеки случай се разглежда индивидуално с цел максимален комфорт и сигурност.
-      </p>
-      <p>
-        Работим с бързина, отговорност и човечност — защото за нас всяка минута е важна. Нашите клиенти ни се доверяват не само заради техническите ни възможности, а заради човешкото отношение, което влагаме във всичко.
-      </p>
-    </div>
-  
-    <div class="about-images">
-      <img src="https://via.placeholder.com/600x400?text=Оборудване+в+линейката" alt="Оборудване">
-      <img src="https://via.placeholder.com/600x400?text=Медицински+екип" alt="Екип">
+
+    <div id="content2">
+      <h3>📞 Бързи връзки:</h3><br>
+      ✅ Директен контакт с лекар<br><br>
+      ✅ Най-близка болница<br><br>
+      ✅ Свали мобилното ни приложение<br><br>
+      🧠 Полезно:<br>
+      ➡️ Остани спокоен<br>
+      ➡️ Осигури достъп до пациента<br>
+      ➡️ Следвай инструкциите на оператора
     </div>
   </div>
 
@@ -366,19 +384,22 @@ nav a:hover {
       </div>
     </div>
     <a href="tel:0899042464" class="call-now-mobile">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24" style="margin-right: 8px;">
-        <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.05-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.05z"/>
-      </svg>
-      Обади се
-    </a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24" style="margin-right: 8px;">
+          <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.05-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.05z"/>
+        </svg>
+        Обади се
+      </a>
+
     <div class="footer-bottom">
       © 2025 Бърза Помощ ЕООД. Всички права запазени. Този сайт използва бисквитки.
     </div>
   </footer>
+
   <script>
     function toggleMenu() {
       document.querySelector("nav").classList.toggle("show");
     }
   </script>
+
 </body>
 </html>
