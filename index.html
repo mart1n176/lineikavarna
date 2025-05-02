@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#669bbc">
   <title>Линейки Варна</title>
   <style>
-    :root {
-  color-scheme: only light;
+  html {
+  color-scheme: light !important;
 }
     * {
       margin: 0;
@@ -259,7 +259,7 @@ nav a:hover {
     .call-now-mobile {
       display: none;
     }
-
+@media (prefers-color-scheme: dark) {
     @media (max-width: 768px) {
       .call-now-mobile {
         display: flex;
@@ -288,6 +288,7 @@ nav a:hover {
   .button-container {
     display: none;
   }
+}
 }
   </style>
 </head>
