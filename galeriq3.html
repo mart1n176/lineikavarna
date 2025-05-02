@@ -1,4 +1,4 @@
-x<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="bg">
 <head>
   <meta charset="UTF-8">
@@ -15,7 +15,10 @@ x<!DOCTYPE html>
       font-family: 'Arial', sans-serif;
       background-color: #669bbc ;
       color: white;
+      @media(max-width: 768px) {
+        background-color: #5fa1f7;
     }
+  }
 
     /* HEADER */
     .header {
@@ -30,7 +33,10 @@ x<!DOCTYPE html>
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;}
+  z-index: 1000;
+  @media(max-width: 768px) {
+        background-color: #c90000;
+    }}
 
     @media(max-width: 768px) {
     .menu-icon {
@@ -96,6 +102,9 @@ nav a:hover {
   transform: translateY(-3px);
   opacity: 1;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  @media(max-width: 768px) {
+        background-color: #c90000;
+    }
 }
 .about-us {
   max-width: 1200px;
@@ -163,7 +172,10 @@ nav a:hover {
       color: white;
       padding: 2rem 1rem;
       margin-top: 3rem;
+      @media(max-width: 768px) {
+        background-color:  #045e8f;
     }
+  }
 
     .footer-container {
       display: flex;
@@ -253,7 +265,7 @@ nav a:hover {
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: #28a745;
+        background-color: #248012;
         color: white;
         text-align: center;
         padding: 15px;
@@ -267,14 +279,14 @@ nav a:hover {
       }
 
       .call-now-mobile svg {
-        flex-shrink: 0;
+        flex-shrink: 0;S
       }
     }
     @media (max-width: 768px) {
   .button-container {
     display: none;
   }
-}
+    }
   </style>
 </head>
 <body>
